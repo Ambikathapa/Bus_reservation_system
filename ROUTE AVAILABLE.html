@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Directions Service</title>
+    
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div id="floating-panel">
+    <b>Start: </b>
+    <select id="start">
+      <option value="Kathmandu">Kathmandu</option>
+      <option value="Bhaktapur">Bhaktapur</option>
+      <option value="lalitpur">lalitpur</option>
+      <option value="Pokhara">Pokhara</option>
+      <option value="Biratnagar">Biratnagar</option>
+      <option value="Lumbini">Lumbini</option>
+      <option value="Hetauda">Hetauda</option>
+      <option value="Birjunj">Birgunj</option>
+      <option value="Birendranagar">Birendranagar</option>
+      <option value="Mahendranagar">Mahendranagar</option>
+      <option value="Sarlahi">Mustang</option>
+      <option value="Janakpur">Manang</option>
+    </select>
+    <b>End: </b>
+    <select id="end">
+        <option value="Kathmandu">Kathmandu</option>
+        <option value="Bhaktapur">Bhaktapur</option>
+        <option value="lalitpur">lalitpur</option>
+        <option value="Pokhara">Pokhara</option>
+        <option value="Biratnagar">Biratnagar</option>
+        <option value="Lumbini">Lumbini</option>
+        <option value="Hetauda">Hetauda</option>
+        <option value="Birjunj">Birgunj</option>
+        <option value="Birendranagar">Birendranagar</option>
+        <option value="Mahendranagar">Mahendranagar</option>
+        <option value="Sarlahi">Mustang</option>
+        <option value="Janakpur">Manang</option>
+    </select>
+    </div>
+    <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Nepal&t=&z=7&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org">123 movies</a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style><a href="https://www.embedgooglemap.net">embedding google maps in html</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style>
+    </div></div>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 7,
+          center: {lat:84.1240 , lng: 28.3949 }
+        });
+        directionsDisplay.setMap(map);
+
+        var onChangeHandler = function() {
+          calculateAndDisplayRoute(directionsService, directionsDisplay);
+        };
+        document.getElementById('start').addEventListener('change', onChangeHandler);
+        document.getElementById('end').addEventListener('change', onChangeHandler);
+      }
+
+      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+        directionsService.route({
+          origin: document.getElementById('start').value,
+          destination: document.getElementById('end').value,
+          travelMode: 'DRIVING'
+        }, function(response, status) {
+          if (status === 'OK') {
+            directionsDisplay.setDirections(response);
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        });
+      }
+      
+    </script>
+    <script
+    src="https://goo.gl/maps/uzjPeGKDP3dAWbS79">
+    src=""
+    </script>
+  </body>
+</html> 

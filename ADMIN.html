@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>welcome to my website</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ADMIN.css">
+ 
+ 
+<style>
+  body {
+    background-image: url("customer.jpg");
+    background-repeat: no-repeat;
+    background-attachment: covered;
+    background-color: rgb(159, 195, 243); ;
+  }
+</style>
+</head>
+<body>
+	
+	<h3 align="left-top">
+		<font face="lato" size="5.5">
+			<marquee behaviour="alternative"><b>SAJA BUS RESERVATION SYSTEM</b></marquee></font>
+	</font>
+
+	
+		<div class="navbar">
+      <a  href="HOME.html"> <b><u>HOME</u></b></a>
+      <a href="SERVICES.html"><b><u>SERVICES</u></b></a>
+       <a href="ROUTE AVAILABLE.html"><b><u>ROUTE AVAILABLE</u></b></a>
+     
+      <div class="dropdown">
+        <button class="active" class="dropbtn"><b>LOGIN</b>
+		</button>
+        <div class="dropdown-content">
+          <a href="CUSTOMER.html">PASSENGER</a>
+          <a href="ADMIN.html">ADMIN</a>
+         
+        </div>
+      </div>
+	</div>
+
+			<div class="form-box"action="db_connection.php"method="post">
+				<h3 align="center">
+					<font face="lato"color="brown"size="3.5" ><p><b>ADMIN</b></p></font>
+				  </h3>
+				<div class="button-box">
+					<div id="btn"></div>
+					<button type="button" class="toggle-btn" onclick="login()">Log In</button>
+					<button type="button" class="toggle-btn"
+					onclick="register()"disabled>Register</button>
+				</div>
+				<div class="social-icons">
+					<img src="fb.png">
+					<img src="tw.png">
+					<img src="google.png">
+					<img src="instagram.png">
+				</div>
+				<form id="login" class="input-group"action="login.php" method="post">
+					<BR><p>Already have an account? <a href="ADMIN.html">Login here</a>.</p>
+					<input type="char" name="user_id" class="input-field" placeholder="Counter Id"
+					required>
+					<input type="password" name="password" class="input-field" placeholder="Enter Password"
+					required>
+					<input type="text"name="company" class="input-field" placeholder="Bus-Company-Name"
+					required>
+					<br>
+					<button type="Submit" class="submit-btn">Login</button>
+					<br>
+					<P>Didn't open? Consult to Head Office.</P>
+				</form> 
+				<form id="register" class="input-group"action="register.php"method="post">
+					<input type="char"name="user id" class="input-field" placeholder="Counter Id"
+					disabled>
+                   <input type="email"name="email id" class="input-field" placeholder="Email Id"
+				   disabled>
+					<input type="number"name="phone no" class="input-field" placeholder="Phone no"
+					disabled>
+					<input type="varchar"name="address" class="input-field" placeholder="Address"
+					disabled>
+                    <input type="text"name="company" class="input-field" placeholder="Bus-Company-Name"
+					required>
+					<input type="password"name="password" class="input-field" placeholder="Enter Password"
+					disabled>
+					<!-- <input type="password"name="confirm-password" class="input-field" placeholder="confirm-password"
+					required> -->
+					<!-- <input type="radio" name="gender" id="Male"> 
+      				<label for="male">Male</label>
+                  <input type="radio" name="gender" id="Female"> 
+                    <label for="female">Female</label>
+					<input type="radio" name="gender" id="Others"> 
+                    <label for="Others">Others</label><br> -->
+					<input type="checkbox" class="check-box"disabled><span>I agree to the terms and conditions</span>
+					
+<button type="Submit"name="submit" class="submit-btn"disabled>register</button>
+				</form>
+			</div>	
+		</div>
+		<script>
+			var x = document.getElementById("login");
+			var y = document.getElementById("register");
+			var z = document.getElementById("btn");
+
+			function register(){
+			x.style.left="-400px";
+			y.style.left="50px";
+			z.style.left="110px";	
+			}
+			function login(){
+			x.style.left="50px";
+			y.style.left="450px";
+			z.style.left="0px";	
+			}
+
+		</script>
+    </body>
+</html>

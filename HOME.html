@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>welcome to my website</title>
+  <link rel="stylesheet" href="style.css">
+
+
+  <style>
+    body {
+      background-image: url("5.jpg");
+      background-repeat: no-repeat;
+      background-attachment: covered;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h3 align="left-top">
+    <font face="lato" size="5.5">
+      <marquee behaviour="alternative"><b>SAJA BUS RESERVATION SYSTEM</b></marquee>
+    </font>
+    </font>
+
+
+    <div class="navbar">
+      <a class="active" href="home.html"> HOME</a>
+      <a href="SERVICES.html">SERVICES</a>
+      <a href="ROUTE AVAILABLE.html">ROUTE AVAILABLE</a>
+
+      <div class="dropdown">
+        <button class="dropbtn"><b>LOGIN</b>
+
+        </button>
+        <div class="dropdown-content">
+          <a href="CUSTOMER.html">PASSENGER</a>
+          <a href="ADMIN.html">ADMIN</a>
+
+        </div>
+      </div>
+    </div>
+
+
+    <form class="booking-form-box" action="homecheck.php" method="post">
+      <input type="text" name="location" class="input-field" placeholder="Enter your location" required><br>
+      <input type="text" name="destination" class="input-field" placeholder="Enter your destination" required><br>
+      <input type="date" name="date" class="input-field" required><br>
+      <br>
+
+      <input type="radio" id="oneway" name="way" value="oneway">
+      <label for="oneway">One-way </label><br>
+      <input type="radio" id="round trip" name="way" value="roundtrip">
+      <label for="roundtrip">Round-trip </label><br>
+      <input type="radio" id="multi trip" name="way" value="multitrip">
+      <label for="multitrip">Multi-trip </label><br><br>
+
+
+      <button type="submit" name="submit" class="btn"><br>CHECK AVAILABILITY</button>
+
+    </form>
+
+    <h3 align="center">
+      <font face="lato" color="green" size="5">
+        <p><br><b>BOOK YOUR TICKET</b></p>
+      </font>
+    </h3>
+
+    <h3 align="center">
+
+      <font face="lato" color="red" size="5">
+        choose your destination and dates to reserve a ticket
+
+      </font>
+
+    </h3>
+
+    <h4 align="center">
+
+      <font face="lato" size="3">
+        <a href="logo.html">BACK TO LOGO</a>
+      </font>
+
+    </h4>
+
+    <h4 align="center">
+
+      <font face="lato" size="3">
+        <a href="HOME.html">GET STARTED</a>
+      </font>
+
+    </h4>
+
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+      }
+
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      .column {
+        float: left;
+        width: 50%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+      }
+
+      .card {
+        float: center;
+        box-shadow: 0 4px 8px 0 rgba(223, 16, 16, 0.2);
+        margin: 8px;
+      }
+
+      .about-section {
+        padding: 50px;
+        text-align: center;
+        background-color: #6793f4;
+        color: white;
+      }
+
+      .container {
+        padding: 0 16px;
+      }
+
+
+      .title {
+        color: grey;
+      }
+
+      .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .button:hover {
+        background-color: #555;
+      }
+
+      @media screen and (max-width: 650px) {
+        .column {
+          width: 0%;
+          display: block;
+        }
+      }
+    </style>
+    </head>
+
+    <body>
+
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <div class="about-section">
+        <h1>About Us </h1>
+        <p>Some text about who we are and what we do.</p>
+      </div>
+      <h2 style="text-align:center">Our Team</h2>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="aakankshya.jpg" alt="Ambika" style="width:23%">
+            <div class="column">
+
+
+              <h2 align="right">Ambika Thapa</h2>
+              <p align="right" class="title">Student of the Edmark college</p>
+              <p align="right" class="title"> BCA,Fourth semester</p>
+              <a align="right" href="mailto:aakanshakh58@gmail.com" target="_blank">
+                <p id="email">aakanshakh58@gmail.com</p>
+              </a>
+              <p><button class="button">Contact : 9854245353</button></p>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="column">
+          <div class="card">
+            <img src="anita.jpg" alt="Anita" style="width:30%">
+           
+              <div class="column">
+                <h2 align="right">Anita Ghimire</h2>
+                <p align="right" class="title">Student of the Edmark college</p>
+                <p align="right" class="title"> BCA,Fourth semester</p>
+                <a align="right" href="mailto:atinaghimirey28@gmail.com" target="_blank">
+                  <p id="email">atinaghimirey28@gmail.com</p>
+                </a>
+
+                <p><button class="button">Contact : 9823532463</button></p>
+              </div>
+            </div>
+          </div>
+
+
+    </body>
+
+</html>
